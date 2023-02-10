@@ -1,0 +1,66 @@
+@import "../../assets/scss/_variables.scss";
+@import "../../assets/scss/mixins.scss";
+
+.blog-hero-section {
+  background-image: url("../../assets/images/blog-page/bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 204px 20px 176px;
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 59px;
+    .title {
+      font-style: normal;
+      font-weight: 700;
+      font-size: 90px;
+      line-height: 115%;
+      text-transform: capitalize;
+      background: linear-gradient(0deg, #ffffff, #ffffff),
+        linear-gradient(
+          108.5deg,
+          rgba(131, 221, 254, 0.52) -7.37%,
+          rgba(131, 221, 254, 0) 64.79%
+        ),
+        #ff427a;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      //   text-fill-color: transparent;
+    }
+    .get-lessons-form {
+      background: rgba(255, 255, 255, 0.24);
+      border-radius: 8px;
+      padding: 38px 53px;
+      .form-title {
+        font-style: normal;
+        font-weight: 600;
+        font-size: 28px;
+        line-height: 120%;
+      }
+      .form {
+        display: grid;
+        grid-template-columns: 63% 30%;
+        grid-gap: 34px;
+        margin-top: 38px;
+        > input {
+          background: #fefefe;
+          border-radius: 82px;
+          padding: 16px 27px;
+          min-height: 56px;
+          border: none;
+          font-style: normal;
+          font-weight: 500;
+          font-size: 18px;
+          line-height: 130%;
+          text-transform: capitalize;
+          color: $black;
+          &::placeholder {
+            color: rgba(0, 4, 21, 0.3);
+          }
+        }
+      }
+    }
+  }
+}

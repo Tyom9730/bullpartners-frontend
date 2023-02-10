@@ -1,0 +1,81 @@
+@import "../../assets/scss/_variables.scss";
+@import "../../assets/scss/mixins.scss";
+@keyframes spin {
+  0% { content: "Dating"};
+  10% { content: "Apps"};
+  20% { content: "Igaming"};
+  30% { content: "Games"};
+  40% { content: "Crypto"};
+  50% { content: "Dating"};
+  60% { content: "Apss"};
+  70% { content: "Igaming"};
+  80% { content: "Games"};
+  90% { content: "Crypto"};
+}
+
+.main-first-section {
+  background-image: url("../../assets/images/main-bg.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+  .container {
+    padding-top: 318px;
+    .title {
+      font-style: normal;
+      font-weight: 700;
+      font-size: 56px;
+      line-height: 115%;
+      text-align: center;
+      text-transform: capitalize;
+      max-width: 778px;
+      margin: 0 auto;
+      #highlighted {
+        color:#04f0ff;
+      }
+      #highlighted:after {
+        content: "Dating";
+        animation: spin 8s linear infinite;
+      }
+      @include md {
+        font-size: 24px;
+        line-height: 110%;
+      }
+    }
+    .desc {
+      font-style: normal;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 130%;
+      text-align: center;
+      text-transform: capitalize;
+      color: rgba(255, 255, 255, 0.8);
+      margin: 16px 0 40px;
+    }
+    .section-buttons {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 257px;
+      > .secondary {
+        margin-left: 15px;
+      }
+    }
+    .trusted {
+      text-align: center;
+      padding-bottom: 40px;
+    }
+  }
+  .bull-absolute-bg {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 20.78%;
+    margin: auto;
+    pointer-events: none;
+  }
+  @include md {
+    padding: 0 20px;
+  }
+}

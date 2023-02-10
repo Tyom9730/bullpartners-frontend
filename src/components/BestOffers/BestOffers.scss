@@ -1,0 +1,70 @@
+@import "../../assets/scss/_variables.scss";
+@import "../../assets/scss/mixins.scss";
+.best-offers-section {
+  padding: 0 20px;
+  .container {
+    padding: 64px 0;
+    border-top: 1px solid rgba(0, 4, 21, 0.3);
+    border-bottom: 1px solid rgba(0, 4, 21, 0.3);
+    > div {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-image: url("../../assets/images/main-page/best-offers-bg.png");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      border-radius: 8px;
+      padding: 46px 48px;
+      .title {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 120%;
+        text-transform: capitalize;
+        max-width: 439px;
+        @include md {
+          font-size: 24px;
+          line-height: 110%;
+        }
+      }
+      .main-form {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        > input {
+          background: #fefefe;
+          border-radius: 82px;
+          padding: 16px 27px;
+          min-height: 56px;
+          border: none;
+          font-style: normal;
+          font-weight: 500;
+          font-size: 18px;
+          line-height: 130%;
+          text-transform: capitalize;
+          color: $black;
+          min-width: 512px;
+          margin-right: 32px;
+          &::placeholder {
+            color: rgba(0, 4, 21, 0.3);
+          }
+          @include md {
+            margin-top: 49px;
+            min-width: 272px;
+            margin-right: 0;
+          }
+        }
+        @include md {
+          flex-direction: column;
+          button {
+            margin-top: 54px;
+          }
+        }
+      }
+      @include md {
+        flex-direction: column;
+      }
+    }
+  }
+}

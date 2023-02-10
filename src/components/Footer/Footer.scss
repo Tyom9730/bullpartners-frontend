@@ -1,0 +1,35 @@
+@import "../../assets/scss/_variables.scss";
+@import "../../assets/scss/mixins.scss";
+.footer-section {
+  padding: 64px 20px;
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .footer-logo-section {
+      .info {
+        margin-top: 16px;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 130%;
+        text-align: center;
+        color: rgba(0, 4, 21, 0.3);
+      }
+    }
+    .socials {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 32px;
+      > svg {
+        cursor: pointer;
+      }
+      @include md {
+        margin-top: 34px;
+      }
+    }
+    @include md {
+      flex-direction: column;
+    }
+  }
+}

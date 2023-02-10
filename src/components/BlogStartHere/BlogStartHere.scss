@@ -1,0 +1,119 @@
+@import "../../assets/scss/_variables.scss";
+@import "../../assets/scss/mixins.scss";
+
+.start-here-section {
+  padding: 110px 20px 120px;
+  .container {
+    .title {
+      font-style: normal;
+      font-weight: 700;
+      font-size: 50px;
+      line-height: 115%;
+      text-transform: capitalize;
+      color: $black;
+    }
+    .desc {
+      font-style: normal;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 130%;
+      text-transform: capitalize;
+      color: rgba(0, 4, 21, 0.8);
+      padding: 12px 0 68px;
+    }
+    .blogs-section {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 51px;
+      .blogs-list {
+        display: grid;
+        grid-gap: 50px;
+        .card {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          grid-gap: 32px;
+          > div {
+            > h3 {
+              font-style: normal;
+              font-weight: 700;
+              font-size: 20px;
+              line-height: 24px;
+              color: #000415;
+            }
+            > p {
+              font-style: normal;
+              font-weight: 400;
+              font-size: 15px;
+              line-height: 20px;
+              color: #000415;
+              padding: 15px 0;
+            }
+
+            > span {
+              font-style: normal;
+              font-weight: 500;
+              font-size: 16px;
+              line-height: 22px;
+              text-decoration-line: underline;
+              text-transform: capitalize;
+              color: #000415;
+            }
+          }
+        }
+      }
+      .main-blog {
+        background: linear-gradient(
+            0deg,
+            rgba(255, 255, 255, 0.12),
+            rgba(255, 255, 255, 0.12)
+          ),
+          radial-gradient(
+              86.73% 77.63% at 71.47% -8.63%,
+              #fe9154 0%,
+              rgba(254, 145, 84, 0) 100%
+            )
+            /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */,
+          radial-gradient(
+              71.56% 121.77% at 2.97% 100%,
+              #86ddfd 3.47%,
+              rgba(134, 221, 253, 0) 100%
+            )
+            /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */,
+          radial-gradient(
+              58.29% 139.04% at 100% 100%,
+              #ff3f55 0%,
+              #ff425b 44.79%,
+              rgba(255, 66, 91, 0) 100%
+            )
+            /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */,
+          #ff4056;
+        border-radius: 8px;
+
+        > div {
+          &:nth-child(1) {
+            width: 100%;
+            > img {
+              width: inherit;
+            }
+          }
+          &:nth-child(2) {
+            padding: 40px 25px;
+            .card-title {
+              font-style: normal;
+              font-weight: 700;
+              font-size: 32px;
+              line-height: 40px;
+            }
+            .card-desc {
+              font-weight: 600;
+              font-size: 15px;
+              line-height: 20px;
+              color: #ffffff;
+              margin: 20px 0 30px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

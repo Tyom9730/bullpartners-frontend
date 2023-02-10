@@ -1,0 +1,72 @@
+@import "../../assets/scss/_variables.scss";
+@import "../../assets/scss/mixins.scss";
+.partners-section {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  max-width: 940px;
+  margin: 0 auto;
+  grid-gap: 47px;
+  padding: 32px 20px;
+  .partner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include md {
+      display: none;
+    }
+  }
+  .marquee-inner {
+    top: 30px;
+    span {
+      float: left;
+      width: 50%;
+    }
+  }
+  .marquee-block {
+    --total-marquee-items: 7;
+    height: 100px;
+    width: calc(126px * (var(--total-marquee-items)));
+    overflow: hidden;
+    box-sizing: border-box;
+    position: relative;
+    display: none;
+    @include md {
+      display: block;
+    }
+  }
+  .marquee-inner {
+    display: block;
+    width: 200%;
+    position: absolute;
+  }
+  .marquee-inner p {
+    font-weight: 800;
+    font-size: 30px;
+    font-family: cursive;
+  }
+  .marquee-inner.to-left {
+    animation: marqueeLeft 25s linear infinite;
+  }
+  .marquee-inner.to-right {
+    animation: marqueeRight 25s linear infinite;
+  }
+  .marquee-item {
+    width: 126px;
+    height: auto;
+    display: inline-block;
+    margin: 0 10px;
+    // float: left;
+    transition: all 0.2s ease-out;
+    .coinbase {
+      margin-left: 25px;
+    }
+  }
+  @keyframes marqueeLeft {
+    0% {
+      left: 0;
+    }
+    100% {
+      left: -100%;
+    }
+  }
+}

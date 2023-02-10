@@ -1,0 +1,174 @@
+@import "../../assets/scss/_variables.scss";
+@import "../../assets/scss/mixins.scss";
+.website-header {
+  padding: 54px 16px 16px;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 11;
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .website-logo {
+        margin-right: 139px;
+        @include md {
+          margin-right: 0;
+        }
+        > a {
+          display: flex;
+          align-items: center;
+          text-decoration: none;
+        }
+        @include md {
+          img {
+            width: 141px;
+          }
+        }
+      }
+      .nav {
+        display: grid;
+        grid-template-columns: repeat(3, auto);
+        grid-gap: 96px;
+        align-items: center;
+        list-style: none;
+        li {
+          display: flex;
+          align-items: center;
+          > a {
+            font-style: normal;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 130%;
+            text-align: center;
+            text-transform: capitalize;
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+          }
+        }
+        @include lg {
+          display: none;
+        }
+      }
+    }
+    .website-lenguage {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 16px;
+      > p {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 130%;
+        text-align: center;
+        text-transform: capitalize;
+        color: rgba(255, 255, 255, 0.5);
+        cursor: pointer;
+        &.active {
+          color: $white;
+        }
+      }
+      @include md {
+        margin-right: -50px;
+      }
+    }
+    .header-buttons {
+      @include md {
+        display: none;
+      }
+    }
+    .sidebar-root {
+      display: none;
+      @include lg {
+        display: block;
+      }
+      width: 0px;
+      &.sidbar-container {
+        position: absolute;
+        width: 100% !important;
+        height: 100vh;
+      }
+      .sidbar-overlay {
+        height: 100vh;
+      }
+      .sidebar-content {
+        visibility: hidden;
+      }
+      .sidebar {
+        width: 80%;
+        background: $white !important;
+        padding: 50px 30px;
+        > div {
+          display: flex;
+          justify-content: space-between;
+          flex-direction: column;
+          height: 100%;
+          .sidebar-nav {
+            display: grid;
+            grid-gap: 20px;
+            align-items: center;
+            list-style: none;
+            li {
+              display: flex;
+              align-items: center;
+              justify-content: flex-end;
+              padding-bottom: 20px;
+              > div {
+                > svg {
+                  > path {
+                    fill: $black;
+                    stroke: $black;
+                  }
+                }
+              }
+              > a {
+                font-style: normal;
+                font-weight: 500;
+                font-size: 18px;
+                line-height: 25px;
+                color: $black;
+                cursor: pointer;
+                text-decoration: none;
+                margin-right: 10px;
+              }
+              &:not(:first-child) {
+                // border-top: 0.5px solid rgba(0, 4, 21, 0.3);
+                border-bottom: 0.5px solid rgba(0, 4, 21, 0.3);
+                margin-left: -30px;
+                margin-right: -30px;
+                padding-right: 30px;
+                padding-top: 31px;
+              }
+            }
+          }
+          .sidebar-footer {
+            .socials {
+              margin-top: 16px;
+              display: grid;
+              grid-template-columns: repeat(4, 1fr);
+              grid-gap: 32px;
+              > svg {
+                cursor: pointer;
+              }
+              @include md {
+                margin-top: 34px;
+              }
+            }
+            .info {
+              font-style: normal;
+              font-weight: 400;
+              font-size: 12px;
+              line-height: 130%;
+              text-align: center;
+              color: rgba(0, 4, 21, 0.3);
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,170 @@
+@import "../../assets/scss/_variables.scss";
+@import "../../assets/scss/mixins.scss";
+.how-it-works-section {
+  background-image: url("../../assets/images/main-page/how-it-work-bg.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 128px 20px;
+  position: relative;
+  .container {
+    .title {
+      font-style: normal;
+      font-weight: 700;
+      font-size: 56px;
+      line-height: 115%;
+      text-transform: capitalize;
+      text-align: center;
+      @include md {
+        font-size: 24px;
+        line-height: 110%;
+      }
+    }
+    .desc {
+      font-style: normal;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 130%;
+      text-transform: capitalize;
+      color: rgba(255, 255, 255, 0.8);
+      text-align: center;
+      margin: 16px 0 48px;
+      @include md {
+        font-size: 14px;
+        line-height: 120%;
+      }
+    }
+    .how-it-works {
+      padding: 87px 0 72px;
+      background: #ffffff;
+      border-radius: 8px;
+      position: relative;
+      z-index: 3;
+      .variants {
+        display: flex;
+        justify-content: space-between;
+        max-width: 1010px;
+        margin: 0 auto;
+        .variant {
+          display: flex;
+          justify-content: center;
+          align-items: flex-start;
+          position: relative;
+          margin-bottom: 28px;
+          &.red {
+            max-width: 200px;
+          }
+          &.blue {
+            max-width: 267px;
+          }
+          &.green {
+            max-width: 209px;
+          }
+          .number {
+            color: $black;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 88px;
+            line-height: 130%;
+            text-transform: capitalize;
+            margin-top: -10px;
+            z-index: 2;
+          }
+          .name {
+            color: $black;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 32px;
+            line-height: 130%;
+            text-transform: capitalize;
+            max-width: 183px;
+            z-index: 2;
+            margin-left: 24px;
+            > span {
+              color: $white;
+              @include md {
+                display: block;
+              }
+            }
+            @include md {
+              font-size: 24px;
+              line-height: 130%;
+            }
+          }
+          .gradient-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 44px;
+            border-radius: 4px;
+            z-index: 1;
+            &.red {
+              background: linear-gradient(90deg, #eb3349 0%, #f45c43 100%);
+            }
+            &.blue {
+              background: linear-gradient(90deg, #33caeb 0%, #435ff4 100%);
+            }
+            &.green {
+              background: linear-gradient(90deg, #d5e800 0%, #33eb7d 100%);
+            }
+          }
+
+          .circle {
+            position: absolute;
+            bottom: -34px;
+            width: 12px;
+            height: 12px;
+            background: $white;
+            border: 0.5px solid rgba(0, 4, 21, 0.3);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 2;
+            > div {
+              width: 8px;
+              height: 8px;
+              background: linear-gradient(90deg, #eb3349 0%, #f45c43 100%);
+              border-radius: 50%;
+            }
+            @include md {
+              top: 20px;
+              left: -40px;
+            }
+          }
+          @include md {
+            margin-left: 70px;
+          }
+        }
+        @include md {
+          flex-direction: column;
+        }
+      }
+      .line {
+        height: 1px;
+        background-color: rgba(0, 4, 21, 0.3);
+        border: none;
+        @include md {
+          transform: rotate(90deg);
+          position: absolute;
+          left: -303px;
+          width: 77vh;
+          top: 340px;
+        }
+      }
+      > .primary {
+        display: block;
+        margin: 0 auto;
+        margin-top: 70px;
+      }
+    }
+  }
+  > img {
+    position: absolute;
+    top: -12px;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+}

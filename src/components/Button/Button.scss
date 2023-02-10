@@ -1,0 +1,35 @@
+@import "../../assets/scss/_variables.scss";
+@import "../../assets/scss/mixins.scss";
+
+button {
+  font-family: "Barlow";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 130%;
+  text-align: center;
+  text-transform: capitalize;
+  color: $white;
+  background: none;
+  border: none;
+  padding: 17px 36px;
+  border-radius: 78px;
+  cursor: pointer;
+  &.primary {
+    background: linear-gradient(90deg, #eb3349 0%, #f45c43 100%);
+  }
+  &.secondary {
+    border: 2px solid #ffffff;
+  }
+  @include md {
+    padding: 7.5px 29px;
+    font-size: 14px;
+    line-height: 19px;
+    &.primary {
+      min-width: 142px;
+    }
+  }
+  @include md {
+    padding: 17px 36px;
+  }
+}
